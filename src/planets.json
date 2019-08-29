@@ -1,0 +1,48 @@
+[{
+    "id": "neptune",
+    "clicked" : false
+},
+{
+    "id": "uranus",
+    "clicked" : false
+},
+{
+    "id": "mars",
+    "clicked" : false
+},
+{
+    "id": "pluto",
+    "clicked" : false
+},
+{
+    "id": "venus",
+    "clicked" : false
+},
+{
+    "id": "jupiter",
+    "clicked" : false
+},
+{
+    "id": "saturn",
+    "clicked" : false
+},
+{
+    "id": "mercury",
+    "clicked" : false
+},
+{
+    "id": "earth",
+    "clicked" : false
+},
+{
+    "id": "kepler1",
+    "clicked" : false
+},
+{
+    "id": "kepler2",
+    "clicked" : false
+},
+{
+    "id": "sun",
+    "clicked" : false
+}]

@@ -1,0 +1,12 @@
+.ScoreCard{
+    background-color: rgb(10, 2, 58);
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+
+}
+.navItem{
+    text-align: center;
+    padding: 26px;
+    color: white;
+}

@@ -1,0 +1,17 @@
+.background{
+    background-image: url(./background.jpg);
+    height: 550px;
+    padding: 250px;
+}
+.titleCont{
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.555);
+    padding: 25px;
+    border-radius: 15px;
+}
+.title{
+    font-size: 70px;
+    font-family: 'Righteous', cursive;
+
+}

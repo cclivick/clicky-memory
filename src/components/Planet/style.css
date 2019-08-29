@@ -1,0 +1,46 @@
+.planetCard{
+    height: 300px;
+    width: 95%;
+    max-width: 300px;
+    border: 2px solid white;
+    background-repeat: no-repeat;
+}
+.col-md-3{
+    padding: 0;
+}
+#neptune{
+    background-image: url(../../images/neptune.jpg);
+}
+#uranus{
+    background-image: url(../../images/uranus.jpg);
+}
+#mars{
+    background-image: url(../../images/mars.jpg);
+}
+#pluto{
+    background-image: url(../../images/pluto.png);
+}
+#venus{
+    background-image: url(../../images/venus.jpg);
+}
+#jupiter{
+    background-image: url(../../images/Jupiter.jpg);
+}
+#saturn{
+    background-image: url(../../images/saturn.jpg);
+}
+#mercury{
+    background-image: url(../../images/mercury.png);
+}
+#earth{
+    background-image: url(../../images/Earth.jpg);
+}
+#kepler1{
+    background-image: url(../../images/kepler-01.jpg);
+}
+#kepler2{
+    background-image: url(../../images/kepler-02.jpg);
+}
+#sun{
+    background-image: url(../../images/sun.jpg);
+}
