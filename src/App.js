@@ -3,7 +3,7 @@ import ScoreCard from "./components/ScoreCard/ScoreCard";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer"
 import Wrapper from "./components/Wrapper/Wrapper";
-import planets from "./planets.json";
+import planetsJSON from "./planets.json";
 import Planet from "./components/Planet/Planet";
 
 const mainStyle = {
@@ -13,22 +13,22 @@ const mainStyle = {
 
 class App extends Component {
   state = {
-    planets,
+    planetsJSON,
     score: 0,
-    highScore: 0
+    highScore: 0,
   }
 
   increment = id => {
-    const planet = this.state.planets.find(planet => planet.id === id);
+    const planet = this.state.planetsJSON.find(planet => planet.id === id);
      if(planet.clicked === false) {
-      planet.clicked = !planet.clicked
+      planet.clicked = true
       this.setState({ score : this.state.score + 1}, function() {
         console.log(this.state.score);
       }) 
      } else {
        this.endGame();
      }
-    this.state.planets.sort(() => Math.random() - 0.5);
+    this.state.planetsJSON.sort(() => Math.random() - 0.5);
 
   }
 
@@ -39,7 +39,15 @@ class App extends Component {
       this.setState({ highScore : currScore });
     }
     this.setState({ score : 0 });
-    alert("Game Over!")
+    const planetToSwitch = this.state.planetsJSON.find(planet => planet.clicked === true);
+    const planetToSwitchID = planetToSwitch.id;
+    planetToSwitch.clicked = false;
+    const filteredPlanetsJSON = this.state.planetsJSON.filter(planets => planets.id !== planetToSwitchID);
+    this.setState({
+      planetsJSON : [...filteredPlanetsJSON, planetToSwitch]
+    });
+    this.setState({ planets : planetsJSON });
+    alert("Game Over!");
   }
 
   render() {
@@ -50,7 +58,7 @@ class App extends Component {
         <div className="main" style={mainStyle}>
           <Wrapper>
             <div className="row">
-            {this.state.planets.map(planet => (
+            {this.state.planetsJSON.map(planet => (
               <div className="col-md-3">
                 <Planet
                   key = {planet.id}
